@@ -10,6 +10,9 @@ function _() {
         [ -f $file ] && source $file
     done
 
+    # For git prompt
+    source ~/.bash-git-prompt/gitprompt.sh  GIT_PROMPT_ONLY_IN_REPO=1
+
     # For Terminal to enable C-s with readline
     stty -ixon -ixoff
 

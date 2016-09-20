@@ -4,7 +4,12 @@ for file in ~/dotfiles/conf/*; do
     ln -sf $file ~/.$tail
 done
 
-# Vim config
+# Git propt
+if [ ! -d ~/.bash-git-prompt ]; then
+  cd ~/; git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+fi
+
+# Vim config                     
 rm -rf ~/.vim;
 ln -sf ~/dotfiles/vim ~/.vim
 # find ~/.vim/ -exec sudo chown -R cdosborn:staff {} +

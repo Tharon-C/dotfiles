@@ -117,7 +117,6 @@ nnoremap -sa <C-W>J:windo<space>normal<space><C-V><C-W>K<CR>
 nnoremap <silent> -sh :!clear && bash;<CR>
 nnoremap <silent> -sx :Sex<CR>
 nnoremap <silent> -ev :vsp $MYVIMRC<CR>
-nnoremap <silent> -ec :sp ~/.vim/colors/uncolor.vim<CR>
 " t(rim) whitespace
 nnoremap <silent> -tr m`:%s:\s*$::g<CR>``
 nnoremap <silent> -tp :TernDefPreview<CR>
@@ -136,6 +135,7 @@ set hlsearch
 set incsearch
 set laststatus=2
 set noswapfile
+set number
 set pastetoggle=<F2>
 set ruler
 set shiftwidth=4
@@ -164,7 +164,6 @@ endif
 if exists("&undodir")
     set undodir=~/.vim/undo
 endif
-colorscheme uncolor
 
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
